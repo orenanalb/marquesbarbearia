@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,6 +30,26 @@ h1 span{color:var(--light)}
 @media(max-width:850px){.hero{grid-template-columns:1fr;gap:50px;min-height:auto;padding-top:35px}.content{text-align:center}.description{margin:auto}.divider{margin:25px auto}.info{justify-items:center}.info-item{justify-content:center}.cta{width:100%;max-width:420px}.flyer{margin:auto}}
 @media(max-width:520px){.container{width:min(100% - 24px,1120px)}header{padding:18px 0;text-align:center}.logo{width:68px;height:68px}.hero{padding:30px 0 50px}h1{font-size:50px}.description{font-size:16px}.flyer{border-radius:13px}}
 </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2267823227392009');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2267823227392009&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 </head>
 <body>
 <header><div class="container">
@@ -51,5 +73,20 @@ h1 span{color:var(--light)}
 </section>
 </main>
 <div class="container bottom">Marques Barbearia</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var whatsappButtons = document.querySelectorAll('a[href*="wa.me/"]');
+
+  whatsappButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact');
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>
